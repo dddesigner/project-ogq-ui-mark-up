@@ -3,24 +3,913 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css"
+    />
     <link rel="stylesheet" href="dist/css/reset.css" />
     <link rel="stylesheet" href="dist/css/styles.css" />
-    <title>ogq</title>
+    <title>마켓 홈 - 네이버 OGQ마켓</title>
   </head>
   <body>
-    <!--
-    <div class="box">
-      <a href="#">aaa</a>
-      <a href="#">bbb</a>
-      <a href="#">ccc</a>
-      <a href="#">ddd</a>
-      <a href="#">eee</a>
-    </div>
-    -->
-    <div>
-      <a href="#">로그인</a>
-      <button>로그아웃</button>
-    </div>
-    <h1>hello</h1>
+    <header class="header">
+      <div class="header__inner">
+        <div class="header__logo">
+          <h1 class="logo-wrap">
+            <a href="#" class="logo-naver__link">naver</a>
+            <a href="#" class="logo-ogq__link">오지큐 마켓</a>
+          </h1>
+        </div>
+        <nav class="header__menu">
+          <ul class="tab">
+            <li class="tab__item"><a href="#">스토리</a></li>
+            <li class="tab__item tab__item--focused"><a href="#">마켓</a></li>
+            <li class="tab__item"><a href="#">크리에이터</a></li>
+            <li class="tab__item"><a href="#">이벤트</a></li>
+          </ul>
+        </nav>
+        <div class="header__account">
+          <div class="header__account__inner">
+            <div class="link-creator">
+              <a href="#">크리에이터 되기</a>
+            </div>
+            <div class="btn-wrap">
+              <button class="btn btn--message">메시지</button>
+              <button class="btn btn--alarm">알람</button>
+              <button class="btn btn--profile">프로필</button>
+            </div>
+          </div>
+        </div>
+        <div class="header__search">
+          <form class="search-form" action="">
+            <div class="search-form__content">
+              <input
+                class="search-form__input"
+                type="text"
+                placeholder="검색어를 입력해주세요."
+                required
+              />
+              <button class="search-form__btn">검색</button>
+            </div>
+          </form>
+        </div>
+        <div class="header__responsive">
+          <h2 class="title">마켓</h2>
+          <div class="btn-home"><a href="#">홈으로 가기</a></div>
+          <div class="menu-wrap">
+            <button class="btn-search">검색</button>
+            <button class="btn-hamburger">메뉴</button>
+          </div>
+        </div>
+      </div>
+      <nav class="header__sub-menu">
+        <ul class="tab">
+          <li class="tab__item tab__item--focused"><a href="#">마켓홈</a></li>
+          <li class="tab__item"><a href="#">스티커</a></li>
+          <li class="tab__item"><a href="#">이미지</a></li>
+          <li class="tab__item"><a href="#">음원</a></li>
+          <li class="tab__item"><a href="#">컬러링시트</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="content-container">
+      <div class="content-container__inner">
+        <div class="featured-box featured-box-1 featured-artworks">
+          <div class="featured-box__header">
+            <h2 class="featured-box__title">스티커</h2>
+            <a class="featured-box__btn-more" href="#">더보기</a>
+          </div>
+          <div class="card-wrap-1">
+            <div class="card">
+              <div class="card__inner">
+                <div class="card__thumb">
+                  <a class="card__link padding" href="#">
+                    <div class="card__link__inner">
+                      <img
+                        class="card__thumb-img"
+                        src="https://storep-phinf.pstatic.net/ogq-59811d7efbda2/stk/cj9fbrgv.png?type=f480_480"
+                        alt="사막여우와 왕자의 할로윈 파티"
+                      /></div
+                  ></a>
+                  <div class="card__btn-wrap">
+                    <button class="card__btn-scrap">찜하기</button>
+                  </div>
+                </div>
+                <div class="card__info">
+                  <h3 class="card__title">
+                    <a href="#">사막여우와 왕자의 할로윈 파티</a>
+                  </h3>
+                  <div class="card__author-wrap">
+                    <a href="#"
+                      ><span class="card__author-thumb"
+                        ><img
+                          src="https://storep-phinf.pstatic.net/ogq-577b08b6b6de9/stk/x1u9xo0z.png?type=f480_480"
+                          alt="에레" /></span
+                      ><span class="card__author-name">에레</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__inner">
+                <div class="card__thumb">
+                  <a class="card__link padding" href="#">
+                    <div class="card__link__inner">
+                      <img
+                        class="card__thumb-img"
+                        src="https://storep-phinf.pstatic.net/ogq-577b08b6b6de9/stk/x1u9xo0z.png?type=f480_480"
+                        alt="해피 할로윈!"
+                      /></div
+                  ></a>
+                  <div class="card__btn-wrap">
+                    <button class="card__btn-scrap">찜하기</button>
+                  </div>
+                </div>
+                <div class="card__info">
+                  <h3 class="card__title"><a href="#">해피 할로윈!</a></h3>
+                  <div class="card__author-wrap">
+                    <a href="#"
+                      ><span class="card__author-thumb"
+                        ><img
+                          src="https://s3-ap-northeast-2.amazonaws.com/prod-seoul-market/PROFILE_IMG/055fffb3/57dc73bfff550/OGQ_명양_2018-12-24_f120_120.png"
+                          alt="명양" /></span
+                      ><span class="card__author-name">명양</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__inner">
+                <div class="card__thumb">
+                  <a class="card__link padding" href="#">
+                    <div class="card__link__inner">
+                      <img
+                        class="card__thumb-img"
+                        src="https://storep-phinf.pstatic.net/ogq-578165f072fa0/stk/nqw71lsd.png?type=f480_480"
+                        alt="해피 할로윈 친구들"
+                      /></div
+                  ></a>
+                  <div class="card__btn-wrap">
+                    <button class="card__btn-scrap">찜하기</button>
+                  </div>
+                </div>
+                <div class="card__info">
+                  <h3 class="card__title">
+                    <a href="#">해피 할로윈 친구들</a>
+                  </h3>
+                  <div class="card__author-wrap">
+                    <a href="#"
+                      ><span class="card__author-thumb"
+                        ><img
+                          src="https://s3-ap-northeast-2.amazonaws.com/prod-seoul-market/PROFILE_IMG/055fffb3/57dc73bfff550/OGQ_명양_2018-12-24_f120_120.png"
+                          alt="땅콩C" /></span
+                      ><span class="card__author-name">땅콩C</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__inner">
+                <div class="card__thumb">
+                  <a class="card__link padding" href="#">
+                    <div class="card__link__inner">
+                      <img
+                        class="card__thumb-img"
+                        src="https://storep-phinf.pstatic.net/ogq-578beac32d931/stk/j5use1ag.png?type=f480_480"
+                        alt="모두 다 할로윈!"
+                      /></div
+                  ></a>
+                  <div class="card__btn-wrap">
+                    <button class="card__btn-scrap">찜하기</button>
+                  </div>
+                </div>
+                <div class="card__info">
+                  <h3 class="card__title"><a href="#">모두 다 할로윈!</a></h3>
+                  <div class="card__author-wrap">
+                    <a href="#"
+                      ><span class="card__author-thumb"
+                        ><img
+                          src="https://s3-ap-northeast-2.amazonaws.com/prod-seoul-market/PROFILE_IMG/055fffb3/57dc73bfff550/OGQ_명양_2018-12-24_f120_120.png"
+                          alt="초향" /></span
+                      ><span class="card__author-name">초향</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__inner">
+                <div class="card__thumb">
+                  <a class="card__link padding" href="#">
+                    <div class="card__link__inner">
+                      <img
+                        class="card__thumb-img"
+                        src="https://storep-phinf.pstatic.net/ogq-57903fc558f47/stk/poyz74gv.png?type=f480_480"
+                        alt="HAPPY HALLOWEEN"
+                      /></div
+                  ></a>
+                  <div class="card__btn-wrap">
+                    <button class="card__btn-scrap">찜하기</button>
+                  </div>
+                </div>
+                <div class="card__info">
+                  <h3 class="card__title"><a href="#">HAPPY HALLOWEEN</a></h3>
+                  <div class="card__author-wrap">
+                    <a href="#"
+                      ><span class="card__author-thumb"
+                        ><img
+                          src="https://s3-ap-northeast-2.amazonaws.com/prod-seoul-market/PROFILE_IMG/055fffb3/57dc73bfff550/OGQ_명양_2018-12-24_f120_120.png"
+                          alt="꾸" /></span
+                      ><span class="card__author-name">꾸</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__inner">
+                <div class="card__thumb">
+                  <a class="card__link padding" href="#">
+                    <div class="card__link__inner">
+                      <img
+                        class="card__thumb-img"
+                        src="https://storep-phinf.pstatic.net/ogq-5787f2ebca8d5/stk/1bntku6t.png?type=f480_480"
+                        alt="민두와 해피 할로윈 파티"
+                      /></div
+                  ></a>
+                  <div class="card__btn-wrap">
+                    <button class="card__btn-scrap">찜하기</button>
+                  </div>
+                </div>
+                <div class="card__info">
+                  <h3 class="card__title">
+                    <a href="#">민두와 해피 할로윈 파티</a>
+                  </h3>
+                  <div class="card__author-wrap">
+                    <a href="#"
+                      ><span class="card__author-thumb"
+                        ><img
+                          src="https://s3-ap-northeast-2.amazonaws.com/prod-seoul-market/PROFILE_IMG/055fffb3/57dc73bfff550/OGQ_명양_2018-12-24_f120_120.png"
+                          alt="화유" /></span
+                      ><span class="card__author-name">화유</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="featured-box__btn-more-m" href="#">더보기</a>
+        </div>
+        <div class="featured-box featured-box-1 featured-images">
+          <div class="featured-box__header">
+            <h2 class="featured-box__title">이미지</h2>
+            <a class="featured-box__btn-more" href="#">더보기</a>
+          </div>
+          <div class="card-wrap-1">
+            <div class="card">
+              <div class="card__inner">
+                <div class="card__thumb">
+                  <a class="card__link" href="#">
+                    <div class="card__link__inner">
+                      <img
+                        class="card__thumb-img"
+                        src="https://storep-phinf.pstatic.net/ogq-59695520597a2/img/qzejrssk.jpg?type=m480_480"
+                        alt="할로윈의 정원"
+                      /></div
+                  ></a>
+                  <div class="card__btn-wrap">
+                    <button class="card__btn-scrap">찜하기</button>
+                  </div>
+                </div>
+                <div class="card__info">
+                  <h3 class="card__title"><a href="#">할로윈의 정원</a></h3>
+                  <div class="card__author-wrap">
+                    <a href="#"
+                      ><span class="card__author-thumb"
+                        ><img
+                          src="https://s3-ap-northeast-2.amazonaws.com/prod-seoul-market/PROFILE_IMG/055fffb3/57dc73bfff550/OGQ_명양_2018-12-24_f120_120.png"
+                          alt="듕듕" /></span
+                      ><span class="card__author-name">듕듕</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__inner">
+                <div class="card__thumb">
+                  <a class="card__link" href="#">
+                    <div class="card__link__inner">
+                      <img
+                        class="card__thumb-img"
+                        src="https://storep-phinf.pstatic.net/ogq-5b2b7ea596cc6/img/mnfzzoiq.png?type=m480_480"
+                        alt="잭 오 랜턴, 할로윈 호박, 할로윈"
+                      /></div
+                  ></a>
+                  <div class="card__btn-wrap">
+                    <button class="card__btn-scrap">찜하기</button>
+                  </div>
+                </div>
+                <div class="card__info">
+                  <h3 class="card__title">
+                    <a href="#">잭 오 랜턴, 할로윈 호박, 할로윈</a>
+                  </h3>
+                  <div class="card__author-wrap">
+                    <a href="#"
+                      ><span class="card__author-thumb"
+                        ><img
+                          src="https://storep-phinf.pstatic.net/ogq-5b2b7ea596cc6/img/mnfzzoiq.png?type=m480_480"
+                          alt="pixtastock<" /></span
+                      ><span class="card__author-name">pixtastock</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__inner">
+                <div class="card__thumb">
+                  <a class="card__link" href="#">
+                    <div class="card__link__inner">
+                      <img
+                        class="card__thumb-img"
+                        src="https://storep-phinf.pstatic.net/ogq-5a2bded1d105f/img/5nixkrm5.png?type=m480_480"
+                        alt="꼬마마녀 피오"
+                      /></div
+                  ></a>
+                  <div class="card__btn-wrap">
+                    <button class="card__btn-scrap">찜하기</button>
+                  </div>
+                </div>
+                <div class="card__info">
+                  <h3 class="card__title"><a href="#">꼬마마녀 피오</a></h3>
+                  <div class="card__author-wrap">
+                    <a href="#"
+                      ><span class="card__author-thumb"
+                        ><img
+                          src="https://s3-ap-northeast-2.amazonaws.com/prod-seoul-market/PROFILE_IMG/055fffb3/57dc73bfff550/OGQ_명양_2018-12-24_f120_120.png"
+                          alt="OGQ" /></span
+                      ><span class="card__author-name">OGQ</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__inner">
+                <div class="card__thumb">
+                  <a class="card__link" href="#">
+                    <div class="card__link__inner">
+                      <img
+                        class="card__thumb-img"
+                        src="https://storep-phinf.pstatic.net/ogq-57e0eafbce636/img/kb0t285s.png?type=m480_480"
+                        alt="해피 할로윈"
+                      /></div
+                  ></a>
+                  <div class="card__btn-wrap">
+                    <button class="card__btn-scrap">찜하기</button>
+                  </div>
+                </div>
+                <div class="card__info">
+                  <h3 class="card__title"><a href="#">해피 할로윈</a></h3>
+                  <div class="card__author-wrap">
+                    <a href="#"
+                      ><span class="card__author-thumb"
+                        ><img
+                          src="https://storep-phinf.pstatic.net/ogq-57e0eafbce636/img/kb0t285s.png?type=m480_480"
+                          alt="OGQ" /></span
+                      ><span class="card__author-name">OGQ</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__inner">
+                <div class="card__thumb">
+                  <a class="card__link" href="#">
+                    <div class="card__link__inner">
+                      <img
+                        class="card__thumb-img"
+                        src="https://storep-phinf.pstatic.net/ogq-59da74b597d56/img/dk0istof.png?type=m480_480"
+                        alt="할로윈프렌즈"
+                      /></div
+                  ></a>
+                  <div class="card__btn-wrap">
+                    <button class="card__btn-scrap">찜하기</button>
+                  </div>
+                </div>
+                <div class="card__info">
+                  <h3 class="card__title"><a href="#">할로윈프렌즈</a></h3>
+                  <div class="card__author-wrap">
+                    <a href="#"
+                      ><span class="card__author-thumb"
+                        ><img
+                          src="https://s3-ap-northeast-2.amazonaws.com/prod-seoul-market/PROFILE_IMG/055fffb3/57dc73bfff550/OGQ_명양_2018-12-24_f120_120.png"
+                          alt="OGQ" /></span
+                      ><span class="card__author-name">OGQ</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__inner">
+                <div class="card__thumb">
+                  <a class="card__link" href="#">
+                    <div class="card__link__inner">
+                      <img
+                        class="card__thumb-img"
+                        src="https://storep-phinf.pstatic.net/ogq-5b2a613e29465/img/jcngrgud.png?type=m480_480"
+                        alt="[치타부] 귀염뽀짝, 즐거운 할로윈 밤 배경화면"
+                      /></div
+                  ></a>
+                  <div class="card__btn-wrap">
+                    <button class="card__btn-scrap">찜하기</button>
+                  </div>
+                </div>
+                <div class="card__info">
+                  <h3 class="card__title">
+                    <a href="#">[치타부] 귀염뽀짝, 즐거운 할로윈 밤 배경화면</a>
+                  </h3>
+                  <div class="card__author-wrap">
+                    <a href="#"
+                      ><span class="card__author-thumb"
+                        ><img
+                          src="https://s3-ap-northeast-2.amazonaws.com/prod-seoul-market/PROFILE_IMG/055fffb3/57dc73bfff550/OGQ_명양_2018-12-24_f120_120.png"
+                          alt="마코빌" /></span
+                      ><span class="card__author-name">마코빌</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="featured-box__btn-more-m" href="#">더보기</a>
+        </div>
+        <div class="featured-box featured-box-2 featured-audio">
+          <div class="featured-box__header">
+            <h2 class="featured-box__title">음원</h2>
+            <a class="featured-box__btn-more" href="#">더보기</a>
+          </div>
+          <div class="card-wrap-2">
+            <div class="card">
+              <div class="card__inner">
+                <div class="card__thumb">
+                  <a class="card__link" href="#"
+                    ><div class="card__link__inner">
+                      <img
+                        class="card__thumb-img"
+                        src="https://storep-phinf.pstatic.net/ogq-5af0cb41bc97d/aud/pta0oaxw.jpg?type=m240_240"
+                        alt="MOONLIGHT"
+                      /></div
+                  ></a>
+                </div>
+                <div class="card__info">
+                  <h3 class="card__title"><a href="#">MOONLIGHT</a></h3>
+                  <div class="card__author-wrap">
+                    <a href="#"
+                      ><span class="card__author-thumb"
+                        ><img
+                          src="https://storep-phinf.pstatic.net/ogq-5af0cb41bc97d/aud/pta0oaxw.jpg?type=m240_240"
+                          alt="FLIO" /></span
+                      ><span class="card__author-name">FILO</span></a
+                    >
+                  </div>
+                </div>
+                <div class="card__btn-wrap">
+                  <button class="card__btn card__btn-scrap"></button>
+                  <button class="card__btn card__btn-play"></button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__inner">
+                <div class="card__thumb">
+                  <a class="card__link" href="#"
+                    ><div class="card__link__inner">
+                      <img
+                        class="card__thumb-img"
+                        src="https://storep-phinf.pstatic.net/ogq-5a55aa4c3c308/aud/0lmrjta6.jpg?type=m240_240"
+                        alt="Horror 7 'Zombio'"
+                      /></div
+                  ></a>
+                </div>
+                <div class="card__info">
+                  <h3 class="card__title"><a href="#">Horror 7 'Zombio'</a></h3>
+                  <div class="card__author-wrap">
+                    <a href="#"
+                      ><span class="card__author-thumb"
+                        ><img
+                          src="https://storep-phinf.pstatic.net/ogq-5a55aa4c3c308/aud/0lmrjta6.jpg?type=m240_240"
+                          alt="TIL" /></span
+                      ><span class="card__author-name">TIL</span></a
+                    >
+                  </div>
+                </div>
+                <div class="card__btn-wrap">
+                  <button class="card__btn card__btn-scrap"></button>
+                  <button class="card__btn card__btn-play"></button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__inner">
+                <div class="card__thumb">
+                  <a class="card__link" href="#"
+                    ><div class="card__link__inner">
+                      <img
+                        class="card__thumb-img"
+                        src="https://storep-phinf.pstatic.net/ogq-5a210edef2868/aud/0ybo0amv.jpg?type=m240_240"
+                        alt="Horror Gamelan Bells"
+                      /></div
+                  ></a>
+                </div>
+                <div class="card__info">
+                  <h3 class="card__title">
+                    <a href="#">Horror Gamelan Bells</a>
+                  </h3>
+                  <div class="card__author-wrap">
+                    <a href="#"
+                      ><span class="card__author-thumb"
+                        ><img
+                          src="https://storep-phinf.pstatic.net/ogq-5a210edef2868/aud/0ybo0amv.jpg?type=m240_240"
+                          alt="Hitshouse" /></span
+                      ><span class="card__author-name">Hitshouse</span></a
+                    >
+                  </div>
+                </div>
+                <div class="card__btn-wrap">
+                  <button class="card__btn card__btn-scrap"></button>
+                  <button class="card__btn card__btn-play"></button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__inner">
+                <div class="card__thumb">
+                  <a class="card__link" href="#"
+                    ><div class="card__link__inner">
+                      <img
+                        class="card__thumb-img"
+                        src="https://storep-phinf.pstatic.net/ogq-5ab70a6e8f337/aud/xqf2gous.png?type=m240_240"
+                        alt="The end of horror"
+                      /></div
+                  ></a>
+                </div>
+                <div class="card__info">
+                  <h3 class="card__title"><a href="#">The end of horror</a></h3>
+                  <div class="card__author-wrap">
+                    <a href="#"
+                      ><span class="card__author-thumb"
+                        ><img
+                          src="https://storep-phinf.pstatic.net/ogq-5ab70a6e8f337/aud/xqf2gous.png?type=m240_240"
+                          alt="파인맨" /></span
+                      ><span class="card__author-name">파인맨</span></a
+                    >
+                  </div>
+                </div>
+                <div class="card__btn-wrap">
+                  <button class="card__btn card__btn-scrap"></button>
+                  <button class="card__btn card__btn-play"></button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__inner">
+                <div class="card__thumb">
+                  <a class="card__link" href="#"
+                    ><div class="card__link__inner">
+                      <img
+                        class="card__thumb-img"
+                        src="https://storep-phinf.pstatic.net/ogq-5a03b74422a5e/aud/oyubcbam.png?type=m240_240"
+                        alt="HaWul - Night Walk"
+                      /></div
+                  ></a>
+                </div>
+                <div class="card__info">
+                  <h3 class="card__title">
+                    <a href="#">HaWul - Night Walk</a>
+                  </h3>
+                  <div class="card__author-wrap">
+                    <a href="#"
+                      ><span class="card__author-thumb"
+                        ><img
+                          src="https://s3-ap-northeast-2.amazonaws.com/prod-seoul-market/PROFILE_IMG/055fffb3/57dc73bfff550/OGQ_명양_2018-12-24_f120_120.png"
+                          alt="HAWUL" /></span
+                      ><span class="card__author-name">HAWUL</span></a
+                    >
+                  </div>
+                </div>
+                <div class="card__btn-wrap">
+                  <button class="card__btn card__btn-scrap"></button>
+                  <button class="card__btn card__btn-play"></button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__inner">
+                <div class="card__thumb">
+                  <a class="card__link" href="#"
+                    ><div class="card__link__inner">
+                      <img
+                        class="card__thumb-img"
+                        src="https://storep-phinf.pstatic.net/ogq-5a361141f544a/aud/vnwhqg1f.jpg?type=m240_240"
+                        alt="장엄서곡"
+                      /></div
+                  ></a>
+                </div>
+                <div class="card__info">
+                  <h3 class="card__title"><a href="#">장엄서곡</a></h3>
+                  <div class="card__author-wrap">
+                    <a href="#"
+                      ><span class="card__author-thumb"
+                        ><img
+                          src="https://storep-phinf.pstatic.net/ogq-5a361141f544a/aud/vnwhqg1f.jpg?type=m240_240"
+                          alt="TIL" /></span
+                      ><span class="card__author-name">TIL</span></a
+                    >
+                  </div>
+                </div>
+                <div class="card__btn-wrap">
+                  <button class="card__btn card__btn-scrap"></button>
+                  <button class="card__btn card__btn-play"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="featured-box__btn-more-m" href="#">더보기</a>
+        </div>
+        <div class="featured-box featured-box-1 featured-coloring">
+          <div class="featured-box__header">
+            <h2 class="featured-box__title">컬러링시트</h2>
+            <a class="featured-box__btn-more" href="#">더보기</a>
+          </div>
+          <div class="card-wrap-1">
+            <div class="card">
+              <div class="card__inner">
+                <div class="card__thumb">
+                  <a class="card__link" href="#">
+                    <div class="card__link__inner">
+                      <img
+                        class="card__thumb-img"
+                        src="https://storep-phinf.pstatic.net/ogq-5b21da21733af/col/bq6kafv8.png?type=m480_480"
+                        alt="찌빌리지 호박몬스터"
+                      /></div
+                  ></a>
+                  <div class="card__btn-wrap">
+                    <button class="card__btn-scrap">찜하기</button>
+                  </div>
+                </div>
+                <div class="card__info">
+                  <h3 class="card__title">
+                    <a href="#">찌빌리지 호박몬스터</a>
+                  </h3>
+                  <div class="card__author-wrap">
+                    <a href="#"
+                      ><span class="card__author-thumb"
+                        ><img
+                          src="https://storep-phinf.pstatic.net/ogq-5b21da21733af/col/bq6kafv8.png?type=m480_480"
+                          alt="남수" /></span
+                      ><span class="card__author-name">남수</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__inner">
+                <div class="card__thumb">
+                  <a class="card__link" href="#">
+                    <div class="card__link__inner">
+                      <img
+                        class="card__thumb-img"
+                        src="https://storep-phinf.pstatic.net/ogq-594a5469a9460/col/jg20z2f9.jpg?type=m480_480"
+                        alt="할로윈 공룡"
+                      /></div
+                  ></a>
+                  <div class="card__btn-wrap">
+                    <button class="card__btn-scrap">찜하기</button>
+                  </div>
+                </div>
+                <div class="card__info">
+                  <h3 class="card__title"><a href="#">할로윈 공룡</a></h3>
+                  <div class="card__author-wrap">
+                    <a href="#"
+                      ><span class="card__author-thumb"
+                        ><img
+                          src="https://storep-phinf.pstatic.net/ogq-594a5469a9460/col/jg20z2f9.jpg?type=m480_480"
+                          alt="하야나라" /></span
+                      ><span class="card__author-name">하야나라</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__inner">
+                <div class="card__thumb">
+                  <a class="card__link" href="#">
+                    <div class="card__link__inner">
+                      <img
+                        class="card__thumb-img"
+                        src="https://storep-phinf.pstatic.net/ogq-577da1ec9a6ac/col/ctb2f6zm.jpg?type=m480_480"
+                        alt="할로윈 해골마녀와 악마캣"
+                      /></div
+                  ></a>
+                  <div class="card__btn-wrap">
+                    <button class="card__btn-scrap">찜하기</button>
+                  </div>
+                </div>
+                <div class="card__info">
+                  <h3 class="card__title">
+                    <a href="#">할로윈 해골마녀와 악마캣</a>
+                  </h3>
+                  <div class="card__author-wrap">
+                    <a href="#"
+                      ><span class="card__author-thumb"
+                        ><img
+                          src="https://storep-phinf.pstatic.net/ogq-577da1ec9a6ac/col/ctb2f6zm.jpg?type=m480_480"
+                          alt="우주동물" /></span
+                      ><span class="card__author-name">우주동물</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__inner">
+                <div class="card__thumb">
+                  <a class="card__link" href="#">
+                    <div class="card__link__inner">
+                      <img
+                        class="card__thumb-img"
+                        src="https://storep-phinf.pstatic.net/ogq-574e1b2c5390e/col/bigxhdpc.jpg?type=m480_480"
+                        alt="할로윈의 잭 오 랜턴"
+                      /></div
+                  ></a>
+                  <div class="card__btn-wrap">
+                    <button class="card__btn-scrap">찜하기</button>
+                  </div>
+                </div>
+                <div class="card__info">
+                  <h3 class="card__title">
+                    <a href="#">할로윈의 잭 오 랜턴</a>
+                  </h3>
+                  <div class="card__author-wrap">
+                    <a href="#"
+                      ><span class="card__author-thumb"
+                        ><img
+                          src="https://storep-phinf.pstatic.net/ogq-574e1b2c5390e/col/bigxhdpc.jpg?type=m480_480"
+                          alt="박미남853" /></span
+                      ><span class="card__author-name">박미남853</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__inner">
+                <div class="card__thumb">
+                  <a class="card__link" href="#">
+                    <div class="card__link__inner">
+                      <img
+                        class="card__thumb-img"
+                        src="https://storep-phinf.pstatic.net/ogq-578eff3d89d85/col/fyojykzk.jpg?type=m480_480"
+                        alt="미야오위치"
+                      /></div
+                  ></a>
+                  <div class="card__btn-wrap">
+                    <button class="card__btn-scrap">찜하기</button>
+                  </div>
+                </div>
+                <div class="card__info">
+                  <h3 class="card__title"><a href="#">미야오위치</a></h3>
+                  <div class="card__author-wrap">
+                    <a href="#"
+                      ><span class="card__author-thumb"
+                        ><img
+                          src="https://storep-phinf.pstatic.net/ogq-578eff3d89d85/col/fyojykzk.jpg?type=m480_480"
+                          alt="미야오타운" /></span
+                      ><span class="card__author-name">미야오타운</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__inner">
+                <div class="card__thumb">
+                  <a class="card__link" href="#">
+                    <div class="card__link__inner">
+                      <img
+                        class="card__thumb-img"
+                        src="https://storep-phinf.pstatic.net/ogq-5afce30023170/col/qp7sx8pm.jpg?type=m480_480"
+                        alt="Trick or Treat Candies"
+                      /></div
+                  ></a>
+                  <div class="card__btn-wrap">
+                    <button class="card__btn-scrap">찜하기</button>
+                  </div>
+                </div>
+                <div class="card__info">
+                  <h3 class="card__title">
+                    <a href="#">Trick or Treat Candies</a>
+                  </h3>
+                  <div class="card__author-wrap">
+                    <a href="#"
+                      ><span class="card__author-thumb"
+                        ><img
+                          src="https://storep-phinf.pstatic.net/ogq-5afce30023170/col/qp7sx8pm.jpg?type=m480_480"
+                          alt="함박" /></span
+                      ><span class="card__author-name">함박</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="featured-box__btn-more-m" href="#">더보기</a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__menu">
+          <ul class="menu-list">
+            <li class="menu-list__link"><a href="#">스토리</a></li>
+            <li class="menu-list__link">
+              <a href="#">마켓</a>
+              <ul>
+                <li><a href="#">마켓홈</a></li>
+                <li><a href="#">스티커</a></li>
+                <li><a href="#">이미지</a></li>
+                <li><a href="#">음원</a></li>
+                <li><a href="#">컬러링시트</a></li>
+              </ul>
+            </li>
+            <li class="menu-list__link">
+              <a href="#">크리에이터</a>
+              <ul>
+                <li><a href="#">크리에이터홈</a></li>
+              </ul>
+            </li>
+            <li class="menu-list__link">
+              <a href="#">이벤트</a>
+              <ul>
+                <li><a href="#">진행중인 이벤트</a></li>
+                <li><a href="#">종료된 이벤트</a></li>
+              </ul>
+            </li>
+            <li class="menu-list__link">
+              <a href="#">고객센터</a>
+              <ul>
+                <li><a href="#">자주하는 질문</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__corp">
+          <div class="footer__logo">
+            <h4 class="logo-wrap">
+              <a href="#" class="logo-naver__link">naver</a>
+              <a href="#" class="logo-ogq__link">오지큐 마켓</a>
+            </h4>
+          </div>
+          <ul class="footer__info">
+            <li class="info-item">대표이사 신철호 | 이메일 support@ogq.me</li>
+            <li class="info-item">
+              서울특별시 강남구 논현로 164 10층 (도곡동, 튼튼영어빌딩)
+            </li>
+            <li class="info-item">사업자 등록번호 220-86-76113</li>
+            <li class="info-item">
+              통신판매업신고번호 제2018-서울강남-03954호
+            </li>
+          </ul>
+          <ul class="footer__link">
+            <li class="link-item"><a href="#">이용약관</a></li>
+            <li class="link-item"><a href="#">개인정보 처리방침</a></li>
+            <li class="link-item"><a href="#">사업자 정보 확인</a></li>
+            <li class="link-item"><a href="#">고객센터</a></li>
+          </ul>
+          <ul class="footer__social-link">
+            <li><a class="link-item link--insta" href="#">인스타</a></li>
+            <li><a class="link-item link--medium" href="#">미디엄</a></li>
+            <li><a class="link-item link--linkedin" href="#">링크드인</a></li>
+            <li><a class="link-item link--weibo" href="#">웨이보</a></li>
+          </ul>
+          <div class="footer__copyright">
+            Copyright &copy; 2020 by OGQ Corp. All rights reserved
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

@@ -22,11 +22,7 @@ body {
   }
   &__inner {
     padding: 0 40px;
-    &::after {
-      display: block;
-      clear: both;
-      content: "";
-    }
+    @extend %clearfix;
   }
 
   &__logo {
@@ -229,11 +225,7 @@ body {
       position: relative;
       height: 48px;
       padding: 20px 0 0;
-      &::after {
-        display: block;
-        clear: both;
-        content: "";
-      }
+      @extend %clearfix;
       .title {
         display: none;
         position: absolute;
@@ -326,11 +318,7 @@ body {
   }
 
   .card-wrap-2 {
-    &::after {
-      display: block;
-      clear: both;
-      content: "";
-    }
+    @extend %clearfix;
   }
 
   .featured-box {
@@ -350,6 +338,9 @@ body {
       font-weight: $font-wt-md;
       color: $color-gy-100;
       padding: 8px 12px;
+    }
+    &__btn-more-m {
+      display: none;
     }
   }
   .featured-box-1.featured-artworks {
@@ -414,6 +405,9 @@ body {
         font-size: 16px;
         font-weight: $font-wt-md;
         color: $color-bk;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
 
       &__author-thumb {
@@ -443,11 +437,7 @@ body {
         margin: 0 24px 20px 0;
       }
       &__inner {
-        &::after {
-          display: block;
-          clear: both;
-          content: "";
-        }
+        @extend %clearfix;
       }
       &__thumb {
         width: 72px;
@@ -534,8 +524,6 @@ body {
     &::before {
       height: 95px;
     }
-    .card-wrap-1 {
-    }
   }
 
   @include responsive("tablet") {
@@ -554,6 +542,7 @@ body {
 
     .card-wrap-1 {
       grid-template-columns: repeat(auto-fill, calc(50% - 12px));
+      gap: 8px;
     }
     .featured-box {
       margin-bottom: 48px;
@@ -561,14 +550,33 @@ body {
         font-size: 20px;
       }
       &__btn-more {
+        display: none;
+      }
+      &__btn-more-m {
+        margin-top: 20px;
+        display: block;
+        width: 100%;
+        height: 34px;
+        line-height: 34px;
+        text-align: center;
+        font-size: $font-sub-caption;
+        font-weight: $font-wt-md;
+        border-radius: 20px;
+        box-shadow: 0 2px 6px 0 rgba(37, 41, 40, 0.08);
+        background: #fff;
       }
     }
+
     .featured-box-1 {
       .card {
         max-width: 100%;
         &__link {
           width: auto;
           height: auto;
+          &__inner {
+            height: 0;
+            padding-bottom: 100%;
+          }
         }
       }
     }
@@ -606,11 +614,7 @@ body {
     max-width: 1280px;
     margin: 0 auto;
     padding: 16px 40px;
-    &::after {
-      display: block;
-      clear: both;
-      content: "";
-    }
+    @extend %clearfix;
   }
 
   &__menu {

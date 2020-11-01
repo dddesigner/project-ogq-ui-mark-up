@@ -7,3 +7,9 @@
   color: white;
   font-weight: bold;
 }
+
+%clearfix::after {
+  clear: both;
+  content: "";
+  display: block;
+}

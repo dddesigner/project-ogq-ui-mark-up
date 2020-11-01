@@ -43,3 +43,13 @@ $max-desktop-s: 1279px;
     color: tomato;
   }
 }
+
+@mixin link($word, $words) {
+  text-decoration: none;
+  display: block;
+  @if $word == "odd" {
+    color: yellow;
+  } @else {
+    color: tomato;
+  }
+}
