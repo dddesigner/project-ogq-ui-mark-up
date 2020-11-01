@@ -17,6 +17,9 @@ body {
   z-index: 100;
   background-color: $color-wt;
   border-bottom: 1px solid $color-gy-50;
+  &__responsive {
+    display: none;
+  }
   &__inner {
     padding: 0 40px;
     &::after {
@@ -34,12 +37,21 @@ body {
       flex-wrap: nowrap;
     }
     .logo-naver__link {
-      width: 55px;
-      height: 17px;
+      text-indent: -9999px;
+      width: 57px;
+      height: 21px;
+      background: url(https://ogqmarket.naver.com/_nuxt/img/866a037.png) 0 -330px
+        no-repeat;
+      background-size: 885px 849px;
     }
     .logo-ogq__link {
-      width: 90px;
-      height: 17px;
+      margin-left: 4px;
+      text-indent: -9999px;
+      width: 99px;
+      height: 21px;
+      background: url(https://ogqmarket.naver.com/_nuxt/img/866a037.png) -61px -330px
+        no-repeat;
+      background-size: 885px 849px;
     }
   }
 
@@ -87,6 +99,22 @@ body {
       margin: 0 12px;
       width: 32px;
       height: 32px;
+      text-indent: -9999px;
+      &--message {
+        background: url(https://ogqmarket.naver.com/_nuxt/img/866a037.png) -272px -38px
+          no-repeat;
+        background-size: 885px 849px;
+      }
+      &--alarm {
+        background: url(https://ogqmarket.naver.com/_nuxt/img/866a037.png) -341px -72px
+          no-repeat;
+        background-size: 885px 849px;
+      }
+      &--profile {
+        background: url(https://ogqmarket.naver.com/_nuxt/img/866a037.png) 2px -459px
+          no-repeat;
+        background-size: 885px 849px;
+      }
     }
   }
 
@@ -95,7 +123,7 @@ body {
     padding: 16px 8px 0;
     .search-form {
       &__content {
-        width: 320px;
+        width: 280px;
         height: 40px;
         position: relative;
       }
@@ -122,6 +150,10 @@ body {
         right: 8px;
         width: 24px;
         height: 24px;
+        text-indent: -9999px;
+        background: url(https://ogqmarket.naver.com/_nuxt/img/866a037.png) -344px -41px
+          no-repeat;
+        background-size: 885px 849px;
       }
     }
   }
@@ -139,6 +171,12 @@ body {
       flex-wrap: nowrap;
       &__item {
         padding: 0 16px;
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child {
+          padding-right: 0;
+        }
         a {
           font-size: $font-caption;
           color: $color-gy-100;
@@ -164,6 +202,104 @@ body {
       }
     }
   }
+  @include responsive("desktop-s") {
+    &__account {
+      .link-creator {
+        display: none;
+      }
+      .btn {
+        &--message {
+          display: none;
+        }
+        &--alarm {
+          display: none;
+        }
+      }
+    }
+  }
+  @include responsive("tablet") {
+    &__account {
+      display: none;
+    }
+    &__search {
+      display: none;
+    }
+    &__responsive {
+      display: block;
+      position: relative;
+      height: 48px;
+      padding: 20px 0 0;
+      &::after {
+        display: block;
+        clear: both;
+        content: "";
+      }
+      .title {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 80px;
+        bottom: 0;
+        left: 80px;
+        line-height: 48px;
+        text-align: center;
+        font-size: $font-body;
+      }
+      .btn-home,
+      .btn-search,
+      .btn-hamburger {
+        width: 24px;
+        height: 24px;
+        text-indent: -9999px;
+      }
+      .btn-home {
+        display: none;
+        a {
+          display: block;
+        }
+        float: left;
+        background: url(https://ogqmarket.naver.com/_nuxt/img/866a037.png) -138px -41px
+          no-repeat;
+        background-size: 885px 849px;
+      }
+      .menu-wrap {
+        float: right;
+      }
+      .btn-search {
+        background: url(https://ogqmarket.naver.com/_nuxt/img/866a037.png) -344px -41px
+          no-repeat;
+        background-size: 885px 849px;
+        margin-right: 4px;
+      }
+      .btn-hamburger {
+        background: url(https://ogqmarket.naver.com/_nuxt/img/866a037.png) -207px -41px
+          no-repeat;
+        background-size: 885px 849px;
+      }
+    }
+  }
+  @include responsive("mobile") {
+    &__logo {
+      display: none;
+    }
+    &__menu {
+      display: none;
+    }
+    &__inner,
+    &__sub-menu {
+      padding: 0 20px;
+      .tab__item {
+        padding: 0 12px;
+      }
+    }
+    &__responsive {
+      padding: 12px 0 0;
+      .title,
+      .btn-home {
+        display: block;
+      }
+    }
+  }
 }
 
 .content-container {
@@ -180,6 +316,21 @@ body {
 
   &__inner {
     padding: 64px 40px 0;
+  }
+
+  .card-wrap-1 {
+    display: grid;
+    grid-gap: 16px 24px;
+    grid-template-columns: repeat(auto-fill, 180px);
+    justify-content: space-around;
+  }
+
+  .card-wrap-2 {
+    &::after {
+      display: block;
+      clear: both;
+      content: "";
+    }
   }
 
   .featured-box {
@@ -201,36 +352,42 @@ body {
       padding: 8px 12px;
     }
   }
-
-  .card-wrap-1 {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+  .featured-box-1.featured-artworks {
+    .card__link {
+      padding: 8px;
+    }
   }
-
-  .card-wrap-2 {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .featured-artworks {
+  .featured-box-1 {
     .card {
       width: 100%;
       max-width: 180px;
       &__thumb {
-        overflow: hidden;
         border-radius: 10px;
         position: relative;
       }
-      &__thumb-img {
+      &__link {
+        &.padding {
+          padding: 8px;
+        }
+        display: block;
         width: 180px;
         height: 180px;
-        background: tomato;
-        &:hover {
-          background-color: yellowgreen;
+        overflow: hidden;
+        border-radius: 12px;
+        background: $color-bg-thumb;
+        &__inner {
+          overflow: hidden;
         }
-      }
-      &__link {
+        .card__thumb-img {
+          overflow: hidden;
+          width: 100%;
+          transition: transform 0.35s;
+          transform: scale(1);
+        }
+        &:hover .card__thumb-img {
+          transition: transform 0.35s;
+          transform: scale(1.1);
+        }
       }
       &__btn-wrap {
         position: absolute;
@@ -240,7 +397,15 @@ body {
       &__btn-scrap {
         width: 24px;
         height: 24px;
-        background-color: violet;
+        text-indent: -9999px;
+        background: url(https://ogqmarket.naver.com/_nuxt/img/866a037.png) -241px -110px
+          no-repeat;
+        background-size: 885px 849px;
+        &:hover {
+          background: url(https://ogqmarket.naver.com/_nuxt/img/866a037.png) -276px -110px
+            no-repeat;
+          background-size: 885px 849px;
+        }
       }
       &__info {
         margin-top: 6px;
@@ -257,7 +422,9 @@ body {
         margin-right: 4px;
         width: 16px;
         height: 16px;
-        background-color: yellow;
+        img {
+          width: 100%;
+        }
       }
       &__author-name {
         font-size: $font-smallest;
@@ -268,51 +435,75 @@ body {
       }
     }
   }
-  .featured-audio {
+  .featured-box-2 {
     .card {
+      float: left;
       width: calc(50% - 12px);
       &:nth-child(2n-1) {
         margin: 0 24px 20px 0;
       }
       &__inner {
-        display: flex;
-        position: relative;
-      }
-      &__thumb {
-        overflow: hidden;
-        border-radius: 10px;
-        width: 72px;
-        height: 72px;
-      }
-      &__thumb-img {
-        width: 72px;
-        height: 72px;
-        background: tomato;
-        &:hover {
-          background-color: yellowgreen;
+        &::after {
+          display: block;
+          clear: both;
+          content: "";
         }
       }
+      &__thumb {
+        width: 72px;
+        height: 72px;
+        float: left;
+        border-radius: 10px;
+        overflow: hidden;
+      }
       &__link {
+        display: block;
+        .card__thumb-img {
+          overflow: hidden;
+          width: 100%;
+          transition: transform 0.35s;
+          transform: scale(1);
+        }
+        &:hover {
+          transition: transform 0.35s;
+          transform: scale(1.1);
+        }
       }
       &__btn-wrap {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        padding: 20px 8px;
+        float: right;
+        padding: 16px 8px;
         vertical-align: middle;
       }
       &__btn {
-        width: 32px;
-        height: 32px;
+        width: 24px;
+        height: 24px;
         background-color: violet;
-      }
-      &__btn-scrap {
-        margin-right: 20px;
+        &-scrap {
+          margin-right: 20px;
+          background: url(https://ogqmarket.naver.com/_nuxt/img/866a037.png) -207px -110px
+            no-repeat;
+          background-size: 885px 849px;
+          &:hover {
+            background: url(https://ogqmarket.naver.com/_nuxt/img/866a037.png) -276px -110px
+              no-repeat;
+            background-size: 885px 849px;
+          }
+        }
+        &-play {
+          width: 32px;
+          height: 32px;
+          border-radius: 24px;
+          box-shadow: 0 2px 6px 0 rgba(37, 41, 40, 0.08);
+          background: url(https://ogqmarket.naver.com/_nuxt/img/866a037.png) -366px -142px
+            no-repeat;
+          background-size: 588px 564px;
+        }
       }
       &__info {
+        float: left;
+        width: calc(100% - 184px);
         height: 72px;
-        padding: 8px;
+        padding: 12px 0px 12px 8px;
       }
       &__title {
         font-size: 16px;
@@ -326,13 +517,80 @@ body {
         margin-right: 4px;
         width: 16px;
         height: 16px;
-        background-color: yellow;
+        img {
+          width: 100%;
+        }
       }
       &__author-name {
         font-size: $font-smallest;
         color: $color-gy-700;
         &:hover {
           text-decoration: underline;
+        }
+      }
+    }
+  }
+  @include responsive("desktop-s") {
+    &::before {
+      height: 95px;
+    }
+    .card-wrap-1 {
+    }
+  }
+
+  @include responsive("tablet") {
+    &::before {
+      height: 95px;
+    }
+  }
+
+  @include responsive("mobile") {
+    &::before {
+      height: 92px;
+    }
+    &__inner {
+      padding: 24px 20px 0;
+    }
+
+    .card-wrap-1 {
+      grid-template-columns: repeat(auto-fill, calc(50% - 12px));
+    }
+    .featured-box {
+      margin-bottom: 48px;
+      &__title {
+        font-size: 20px;
+      }
+      &__btn-more {
+      }
+    }
+    .featured-box-1 {
+      .card {
+        max-width: 100%;
+        &__link {
+          width: auto;
+          height: auto;
+        }
+      }
+    }
+    .featured-box-2 {
+      .card {
+        width: 100%;
+        margin-bottom: 16px !important;
+        &__thumb {
+          width: 56px;
+          height: 56px;
+        }
+        &__btn-wrap {
+          padding: 12px 8px;
+        }
+        &__info {
+          float: left;
+          width: calc(100% - 152px);
+          height: 56px;
+          padding: 6px 0px 6px 8px;
+        }
+        &__title {
+          font-size: 14px;
         }
       }
     }
@@ -387,6 +645,29 @@ body {
   }
 
   &__logo {
+    .logo-wrap {
+      display: flex;
+      flex-wrap: nowrap;
+      a {
+        display: block;
+        text-indent: -9999px;
+      }
+    }
+    .logo-naver__link {
+      width: 45px;
+      height: 17px;
+      background: url(https://ogqmarket.naver.com/_nuxt/img/866a037.png) -136px -303px
+        no-repeat;
+      background-size: 885px 849px;
+    }
+    .logo-ogq__link {
+      margin-left: 4px;
+      width: 78px;
+      height: 17px;
+      background: url(https://ogqmarket.naver.com/_nuxt/img/866a037.png) -186px -303px
+        no-repeat;
+      background-size: 885px 849px;
+    }
   }
 
   &__info {
@@ -414,10 +695,51 @@ body {
     display: flex;
     flex-wrap: nowrap;
     .link-item {
+      display: block;
       width: 24px;
       height: 24px;
       margin-right: 12px;
-      background-color: cadetblue;
+      text-indent: -9999px;
+    }
+    .link--insta {
+      background: url(https://ogqmarket.naver.com/_nuxt/img/866a037.png) -142px -329px
+        no-repeat;
+      background-size: 588px 564px;
+      &:hover {
+        background: url(https://ogqmarket.naver.com/_nuxt/img/866a037.png) -142px -357.5px
+          no-repeat;
+        background-size: 588px 564px;
+      }
+    }
+    .link--medium {
+      background: url(https://ogqmarket.naver.com/_nuxt/img/866a037.png) -171px -329px
+        no-repeat;
+      background-size: 588px 564px;
+      &:hover {
+        background: url(https://ogqmarket.naver.com/_nuxt/img/866a037.png) -171px -357.5px
+          no-repeat;
+        background-size: 588px 564px;
+      }
+    }
+    .link--linkedin {
+      background: url(https://ogqmarket.naver.com/_nuxt/img/866a037.png) -199px -329px
+        no-repeat;
+      background-size: 588px 564px;
+      &:hover {
+        background: url(https://ogqmarket.naver.com/_nuxt/img/866a037.png) -199px -357.5px
+          no-repeat;
+        background-size: 588px 564px;
+      }
+    }
+    .link--weibo {
+      background: url(https://ogqmarket.naver.com/_nuxt/img/866a037.png) -228px -329px
+        no-repeat;
+      background-size: 588px 564px;
+      &:hover {
+        background: url(https://ogqmarket.naver.com/_nuxt/img/866a037.png) -228px -357.5px
+          no-repeat;
+        background-size: 588px 564px;
+      }
     }
   }
 
@@ -425,6 +747,37 @@ body {
     margin-top: 24px;
     font-size: $font-smallest;
     color: $color-gy-100;
+  }
+
+  @include responsive("tablet") {
+    &__menu,
+    &__corp {
+      width: 100%;
+    }
+    &__menu {
+      margin: 20px 0 40px;
+      .menu-list__link {
+        width: 20%;
+      }
+    }
+  }
+
+  @include responsive("mobile") {
+    &__inner {
+      padding: 16px 20px;
+    }
+    &__menu {
+      .menu-list {
+        height: 300px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: start;
+        &__link {
+          width: 50%;
+          margin-bottom: 24px;
+        }
+      }
+    }
   }
 }
 

@@ -1,4 +1,25 @@
-@mixin name {
+/* responsive width */
+
+$max-mobile: 719px;
+$min-tablet: 720px;
+$max-tablet: 1023px;
+$min-desktop-s: 1024px;
+$max-desktop-s: 1279px;
+
+@mixin responsive($device) {
+  @if $device == "desktop-s" {
+    @media screen and (max-width: $max-desktop-s) {
+      @content;
+    }
+  } @else if $device == "tablet" {
+    @media screen and (max-width: $max-tablet) {
+      @content;
+    }
+  } @else if $device == "mobile" {
+    @media screen and (max-width: $max-mobile) {
+      @content;
+    }
+  }
 }
 
 @mixin sexyTitle {
@@ -20,20 +41,5 @@
     color: yellow;
   } @else {
     color: tomato;
-  }
-}
-
-$minI: 500px;
-$maxI: 700px;
-
-@mixin responsive($vw) {
-  @if $vw == "iphone" {
-    @media screen and (min-width: $minI) and (max-width: $maxI) {
-      @content;
-    }
-  } @else if $vw == "tablet" {
-    @media screen and (max-width: 1080px) {
-      @content;
-    }
   }
 }
