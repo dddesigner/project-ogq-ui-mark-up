@@ -1,0 +1,39 @@
+@mixin name {
+}
+
+@mixin sexyTitle {
+  color: blue;
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+@mixin link($color) {
+  text-decoration: none;
+  display: block;
+  color: $color;
+}
+
+@mixin link($word) {
+  text-decoration: none;
+  display: block;
+  @if $word == "odd" {
+    color: yellow;
+  } @else {
+    color: tomato;
+  }
+}
+
+$minI: 500px;
+$maxI: 700px;
+
+@mixin responsive($vw) {
+  @if $vw == "iphone" {
+    @media screen and (min-width: $minI) and (max-width: $maxI) {
+      @content;
+    }
+  } @else if $vw == "tablet" {
+    @media screen and (max-width: 1080px) {
+      @content;
+    }
+  }
+}
