@@ -1,5 +1,4 @@
 /* responsive width */
-
 $max-mobile: 719px;
 $min-tablet: 720px;
 $max-tablet: 1023px;
@@ -22,34 +21,35 @@ $max-desktop-s: 1279px;
   }
 }
 
-@mixin sexyTitle {
-  color: blue;
-  font-size: 30px;
-  margin-bottom: 12px;
+/* background-image */
+@mixin bg-img($po-x, $po-y, $size-w, $size-h) {
+  background-image: url(https://ogqmarket.naver.com/_nuxt/img/866a037.png);
+  background-repeat: no-repeat;
+  background-position: $po-x $po-y;
+  background-size: $size-w $size-h;
 }
 
-@mixin link($color) {
-  text-decoration: none;
-  display: block;
-  color: $color;
+/* scale up transition */
+@mixin scale-up($scale) {
+    transition: transform 0.35s;
+    transform: scale($scale);
 }
 
-@mixin link($word) {
-  text-decoration: none;
-  display: block;
-  @if $word == "odd" {
-    color: yellow;
-  } @else {
-    color: tomato;
-  }
+/* flexbox */
+@mixin flexbox($wrap) {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: $wrap;
 }
 
-@mixin link($word, $words) {
-  text-decoration: none;
-  display: block;
-  @if $word == "odd" {
-    color: yellow;
-  } @else {
-    color: tomato;
-  }
+/* font */
+
+/* width-height */
+@mixin w-h($width, $height) {
+    width: $width;
+    height: $height;
+
 }

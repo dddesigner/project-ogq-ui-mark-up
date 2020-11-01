@@ -1,76 +1,23 @@
-# SCSS Masterclass
+# Project naver-ogq-market page-artwork mark-up
 
-(S)CSS Layout Masterclass: Flexbox & Grid
 
-## Flexbox:
+# 작업기간 : 10/31 ~11/1
 
-- [x] flex-direction
-- [x] order
-- [x] justify-content
-- [x] align-items
-- [x] align-self
-- [x] flex-wrap
-- [x] align-content
-- [x] flex-grow
-- [x] flex-shrink
-- [x] flex-basis
 
-## Grid:
+# 작업범위 : 네이버 오지큐 마켓의 '마켓' 페이지 UI 마크업 퍼블리싱
+# https://ogqmarket.naver.com/artworks
 
-- [x] grid-template-columns
-- [x] grid-template-rows
-- [x] column-gap
-- [x] row-gap
-- [x] gap
-- [x] grid-template-areas
-- [x] grid-column-start
-- [x] grid-column-end
-- [x] grid-row-start
-- [x] grid-row-end
-- [x] grid-column
-- [x] grid-row
-- [x] grid-template
-- [x] justify-items
-- [x] align-items
-- [x] place-items
-- [x] justify-content
-- [x] align-content
-- [x] place-content
-- [x] justify-self
-- [x] align-self
-- [x] place-self
-- [x] grid-auto-rows
-- [x] grid-auto-flow
-- [x] grid-auto-columns
 
-### Keywords & Functions:
+# 작업내용 :
+# '마켓' 페이지를 4가지 width에 맞춰 반응형 퍼블리싱
 
-- [x] repeat
-- [x] fr
-- [x] minmax
-- [x] auto-fit
-- [x] auto-fill
-- [x] min-content
-- [x] max-content
+# mobile / max-width:719px,
+# tablet / max-width:1023px,
+# deskop-small / max-width:1279px,
+# desktop /min-width:1280px
 
-## SCSS:
+# css className 은 'BEM(Block, Element, Modifier)' 방식을 따랐습니다.
 
-- [x] Variables
-- [x] Nesting
-- [x] Mixins
-- [x] Extend
-- [x] Responsive Mixins
 
-## To Clone:
-
-- [x] [https://besthorrorscenes.com/](https://besthorrorscenes.com/)
-- [x] [https://paint-box.com/](https://paint-box.com/)
-- [x] [http://10x19.co/](http://10x19.co/)
-- [x] [http://www.z-o-o.fr/](http://www.z-o-o.fr/)
-- [x] [https://schwartzmedia.com.au/](https://schwartzmedia.com.au/)
-- [x] [https://tolv.dk/](https://tolv.dk/)
-- [x] [https://rodicdavidson.co.uk/](https://rodicdavidson.co.uk/)
-- [x] [https://beige.de/](https://beige.de/)
-- [x] [http://donicaida.com/](http://donicaida.com/)
-- [x] [https://canalstreet.market/](https://canalstreet.market/)
-- [x] [https://wonhundred.com/](https://wonhundred.com/)
+# 사용언어 :
+# HTML, CSS(SCSS)

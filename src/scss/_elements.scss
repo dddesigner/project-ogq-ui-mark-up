@@ -1,14 +1,5 @@
-%button {
-  border-radius: 12px;
-  font-size: 12px;
-  text-transform: uppercase;
-  padding: 5px 10px;
-  background: peru;
-  color: white;
-  font-weight: bold;
-}
-
-%clearfix::after {
+/* clearfix */
+%clearfix {
   clear: both;
   content: "";
   display: block;
