@@ -742,7 +742,7 @@ body {
     }
     &__menu {
       .menu-list {
-        height: 300px;
+        height: auto;
         @include flexbox(nowrap);
         flex-direction: column;
         justify-content: start;
