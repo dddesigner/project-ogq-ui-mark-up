@@ -729,6 +729,16 @@ body {
     }
     &__menu {
       margin: 20px 0 40px;
+      .menu-list {
+        height: auto;
+        @include flexbox(nowrap);
+        flex-direction: column;
+        justify-content: start;
+        &__link {
+          width: 50%;
+          margin-bottom: 24px;
+        }
+      }
       .menu-list__link {
         width: 20%;
       }
@@ -743,15 +753,9 @@ body {
     &__menu {
       .menu-list {
         height: auto;
-        @include flexbox(nowrap);
-        flex-direction: column;
-        justify-content: start;
-        &__link {
-          width: 50%;
-          margin-bottom: 24px;
-        }
       }
     }
+
   }
 }
 /* footer end */
