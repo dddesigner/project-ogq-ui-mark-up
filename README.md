@@ -1,4 +1,4 @@
-# Project naver-ogq-market page-artwork mark-up
+# Project naver-ogq-market ui-mark-up
 
 
  작업기간 : 10/31 ~11/1
