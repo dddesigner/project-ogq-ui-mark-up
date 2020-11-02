@@ -9,7 +9,6 @@ body {
   color: $color-bk;
 }
 
-
 /* header start */
 .header {
   position: fixed;
@@ -322,6 +321,7 @@ body {
       margin-bottom: 20px;
     }
     &__title {
+      width: 100px;
       font-size: $font-title;
       font-weight: $font-wt-bd;
     }
@@ -344,7 +344,6 @@ body {
 
   /* featured-box-1 */
   .featured-box-1 {
-
     /* featured-box-1 > card */
     .card {
       width: 100%;
@@ -422,7 +421,6 @@ body {
 
   /* featured-box-2 */
   .featured-box-2 {
-
     /* featured-box-2 > card */
     .card {
       float: left;
@@ -758,7 +756,6 @@ body {
         width: 100%;
       }
     }
-
   }
 }
 /* footer end */
